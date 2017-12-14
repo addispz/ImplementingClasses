@@ -51,7 +51,9 @@ class Point(object):
     def __repr__(self):
         """ Returns a string that represents the point. """
         return "Point(" + str(self.x) + ", " + str(self.y) + ")"
-        #return "Point({}, {})".format(self.x, self.y)
+        #
+        # #return "Point({}, {})".format(self.x, self.y)
+
 
     def clone(self):
         """ Creates and returns a new Point at the same x y as self. """
@@ -70,7 +72,13 @@ class Point(object):
     def get_number_of_moves_made(self):
         """ Returns an integer that is the number of times that
        this Point has "moved" via calls to   move_to  and/or   move_by. """
-        
+        count = 0
+
+        return count
+
+    def get_distance_from_start(self):
+        """ Returns the distance from this Point's current position
+       to the position that the Point was at when it was constructed. """
 
     def get_distance_from_start(self):
         """ Returns the distance from this Point's current position
