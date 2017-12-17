@@ -66,21 +66,21 @@ class Point(object):
 
     def move_to(self, x, y):
         """ Moves this point to a new x y location. """
-        old_point = Point(self.x, self.y)
+        point = Point(self.x, self.y)
         self.x = x
         self.y = y
 
         self.total_moves = self.total_moves + 1
-        self.total_distance = self.total_distance + self.get_distance_from(old_point)
+        self.total_distance = self.total_distance + self.get_distance_from(point)
 
     def move_by(self, dx, dy):
         """ This has the effect of "moving" this Point BY the given (dx, dy)."""
-        old_point = Point(self.x, self.y)
+        point = Point(self.x, self.y)
         self.x = self.x + dx
         self.y = self.y + dy
 
         self.total_moves = self.total_moves + 1
-        self.total_distance = self.total_distance + self.get_distance_from(old_point)
+        self.total_distance = self.total_distance + self.get_distance_from(point)
 
     def get_number_of_moves_made(self):
         """ Returns an integer that is the number of times that
